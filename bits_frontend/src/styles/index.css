@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+
+@layer base{
+
+  /* Typography */
+  h1,h2{
+    color: theme('colors.primary-color');
+    font-family: Alata;
+  }
+  h1{
+    font-size: 4rem;
+  }
+  h2{
+    font-size: 3rem;
+  }
+  p, span{
+    font-family: Nunito;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.64px;
+  }
+
+  /* Other */
+  input:focus{
+    outline: none;
+    border: 1px solid theme('colors.primary-color');
+  }
+}
+
+@layer components{
+
+  .button{
+    width: 350px;
+    height: 45px;
+    padding: 10px 15px;
+    
+    border-radius: 10px;
+
+    transition-duration: 150ms;
+  }
+  .button:hover{
+    color:theme('colors.primary-color');
+    background-color: #FFF;
+    border: 2px solid theme('colors.primary-color');
+  }
+  .primary{
+    background-color: theme('colors.primary-color');
+    color: #FFFF;
+  }
+
+  .input-box{
+    display: flex;
+    width: 350px;
+    height: 45px;
+    padding: 15px 25px;
+
+
+    border-radius: 10px;
+    background: #F5F5F5;
+  }
+
+}
