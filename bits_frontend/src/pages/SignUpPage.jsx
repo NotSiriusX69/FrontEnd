@@ -1,7 +1,7 @@
 import React from "react";
 
 import Logo from "../components/Logo.jsx";
-import SignUpContainer from "../container/SignUpContainer.jsx";
+import SignUpContainer from "../containers/SignUpContainer.jsx";
 
 const SignUpPage = () => {
   return (

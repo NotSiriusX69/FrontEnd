@@ -7,13 +7,31 @@
 
 
 @layer base{
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
 
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.primary-color');
+  }
   *{
     margin:0;
   }
 
   /* Typography */
-  h1,h2{
+  h1,h2,h3{
     color: theme('colors.primary-color');
     font-family: Alata;
   }
@@ -22,6 +40,10 @@
   }
   h2{
     font-size: 3rem;
+  }
+  h3{
+    color: #000;
+    font-size: 1.6rem;
   }
   p, span{
     font-family: Nunito;

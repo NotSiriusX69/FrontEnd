@@ -1,7 +1,7 @@
 import React from "react";
 
 import Logo from "../components/Logo.jsx";
-import LoginContainer from "../container/LoginContainer.jsx";
+import LoginContainer from "../containers/LoginContainer.jsx";
 
 const LoginPage = () => {
   return (
