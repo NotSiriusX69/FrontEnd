@@ -7,7 +7,7 @@ const AdminDashboardPage = () => {
   return (
     <div className="flex flex-col px-6">
       <div className="flex flex-row justify-between">
-        <div className="">
+        <div>
           <h2>Welcome Sirius </h2>
           <h3>Admins Dashboard</h3>
         </div>

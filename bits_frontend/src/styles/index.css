@@ -70,6 +70,24 @@
     outline: none;
     border: 1px solid theme('colors.primary-color');
   }
+  table{
+    width: 100%;
+
+    text-align: left;
+
+    padding: 1rem;
+    margin: 2rem 0rem;
+  }
+  th{
+    padding: 2rem 0rem;
+  }
+  tr{
+    border-bottom: 1px solid black;
+  }
+  td{
+    font-size: 0.9rem;
+    padding: 1rem 0rem;
+  }
 }
 
 @layer components{
@@ -92,6 +110,22 @@
     background-color: theme('colors.primary-color');
     color: #FFFF;
   }
+  .danger{
+    background-color: #ED0800;
+    color: #FFFF;
+  }
+    .danger:hover{
+      color: #ED0800;
+      border: 2px solid #ED0800;
+    }
+  .green{
+    background-color: #3BD75D;
+    color: #FFFF;
+  }
+    .green:hover{
+      color: #3BD75D;
+      border: 2px solid #3BD75D;
+    }
 
   .input-box{
     display: flex;
@@ -102,6 +136,9 @@
 
     border-radius: 10px;
     background: #F5F5F5;
+  }
+  .search{
+    width: 100%;
   }
 
   /* error classes */

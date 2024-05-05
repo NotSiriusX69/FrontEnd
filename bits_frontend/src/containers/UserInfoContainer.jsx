@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import InputBox from "../components/InputBox";
 
-import getUserId from "../utils/GetCookie";
-
-const AdminInfoContainer = () => {
+const UserInfoContainer = () => {
   useEffect(() => {
     retrieveData();
   }, []);
@@ -17,15 +15,11 @@ const AdminInfoContainer = () => {
     isAdmin: false,
     createdAt: "",
   });
-
+  
   const retrieveData = async (e) => {
     try {
-      const user_id = getUserId();
-      if (isNaN(user_id)) {
-        console.log("user error");
-      }
       const response = await fetch(
-        `https://localhost:7016/get-user-info?id=${user_id}`,
+        `https://localhost:7016/get-user-info?id=${id}`,
         {
           method: "GET",
           headers: {
@@ -48,7 +42,7 @@ const AdminInfoContainer = () => {
 
   return (
     <div className="flex flex-col gap-2">
-      <h3>Sirius Info</h3>
+      <h3>{retrievedData.userName}</h3>
       <p className="">User Id</p>
       <InputBox
         type={"text"}
@@ -87,12 +81,12 @@ const AdminInfoContainer = () => {
       <p className="">Created At</p>
       <InputBox
         type={"text"}
-        placeholder={"User Name"}
-        name={"username"}
+        placeholder={"Created At"}
+        name={"createdat"}
         value={retrievedData.createdAt}
       />
     </div>
   );
 };
 
-export default AdminInfoContainer;
+export default UserInfoContainer;
